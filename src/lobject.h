@@ -12,7 +12,7 @@
 #include "lua.h"
 
 
-#ifdef LUA_DEBUG
+#ifdef _DEBUG
 #undef NDEBUG
 #include <assert.h>
 #define LUA_INTERNALERROR(s)	assert(((void)s,0))
@@ -23,7 +23,7 @@
 #endif
 
 
-#ifdef LUA_DEBUG
+#ifdef _DEBUG
 /* to avoid warnings, and make sure value is really unused */
 #define UNUSED(x)	(x=0, (void)(x))
 #else
