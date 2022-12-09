@@ -295,7 +295,7 @@ static int read_pattern (lua_State *L, FILE *f, const char *p) {
 
 
 static int read_number (lua_State *L, FILE *f) {
-  double d;
+  float d;
   if (fscanf(f, "%lf", &d) == 1) {
     lua_pushnumber(L, d);
     return 1;
@@ -529,7 +529,7 @@ static int io_getenv (lua_State *L) {
 
 
 static int io_clock (lua_State *L) {
-  lua_pushnumber(L, ((double)clock())/CLOCKS_PER_SEC);
+  lua_pushnumber(L, ((float)clock())/CLOCKS_PER_SEC);
   return 1;
 }
 

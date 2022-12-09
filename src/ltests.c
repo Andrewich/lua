@@ -32,9 +32,9 @@ void luaB_opentests (lua_State *L);
 
 
 /*
-** The whole module only makes sense with LUA_DEBUG on
+** The whole module only makes sense with _DEBUG on
 */
-#ifdef LUA_DEBUG
+#ifdef _DEBUG
 
 
 

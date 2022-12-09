@@ -19,7 +19,7 @@
 #include "ltm.h"
 
 
-#ifdef LUA_DEBUG
+#ifdef _DEBUG
 static lua_State *lua_state = NULL;
 void luaB_opentests (lua_State *L);
 #endif
@@ -55,7 +55,7 @@ static void f_luaopen (lua_State *L, void *ud) {
   lua_newtable(L);
   lua_ref(L, 1);  /* create registry */
   lua_register(L, LUA_ERRORMESSAGE, errormessage);
-#ifdef LUA_DEBUG
+#ifdef _DEBUG
   luaB_opentests(L);
   if (lua_state == NULL) lua_state = L;  /* keep first state to be opened */
 #endif

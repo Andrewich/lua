@@ -17,7 +17,7 @@
 
 
 
-#ifdef LUA_DEBUG
+#ifdef _DEBUG
 /*
 ** {======================================================================
 ** Controlled version for realloc.

@@ -30,7 +30,7 @@ void *luaM_growaux (lua_State *L, void *block, size_t nelems,
 	((v)=(t *)luaM_realloc(L, v,(n)*(lint32)sizeof(t)))
 
 
-#ifdef LUA_DEBUG
+#ifdef _DEBUG
 extern unsigned long memdebug_numblocks;
 extern unsigned long memdebug_total;
 extern unsigned long memdebug_maxmem;
