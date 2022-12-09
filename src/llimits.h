@@ -36,7 +36,7 @@
 ** GREP LUA_NUMBER to change that
 */
 #ifndef LUA_NUM_TYPE
-#define LUA_NUM_TYPE double
+#define LUA_NUM_TYPE float
 #endif
 
 typedef LUA_NUM_TYPE Number;
@@ -77,7 +77,7 @@ typedef unsigned long lint32;  /* unsigned int with at least 32 bits */
 
 
 /* type to ensure maximum alignment */
-union L_Umaxalign { double d; char *s; long l; };
+union L_Umaxalign { float d; char *s; long l; };
 
 
 

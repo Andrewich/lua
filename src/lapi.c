@@ -154,7 +154,7 @@ LUA_API int lua_lessthan (lua_State *L, int index1, int index2) {
 
 
 
-LUA_API double lua_tonumber (lua_State *L, int index) {
+LUA_API float lua_tonumber (lua_State *L, int index) {
   StkId o = luaA_indexAcceptable(L, index);
   return (o == NULL || tonumber(o)) ? 0 : nvalue(o);
 }
@@ -205,7 +205,7 @@ LUA_API void lua_pushnil (lua_State *L) {
 }
 
 
-LUA_API void lua_pushnumber (lua_State *L, double n) {
+LUA_API void lua_pushnumber (lua_State *L, float n) {
   nvalue(L->top) = n;
   ttype(L->top) = LUA_TNUMBER;
   api_incr_top(L);
