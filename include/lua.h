@@ -166,6 +166,7 @@ LUA_API int   lua_dobuffer (lua_State *L, const char *buff, size_t size, const c
 LUA_API int   lua_getgcthreshold (lua_State *L);
 LUA_API int   lua_getgccount (lua_State *L);
 LUA_API void  lua_setgcthreshold (lua_State *L, int newthreshold);
+LUA_API void  lua_gc (lua_State *L);
 
 /*
 ** miscellaneous functions

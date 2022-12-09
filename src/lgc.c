@@ -351,3 +351,6 @@ void luaC_checkGC (lua_State *L) {
     luaC_collectgarbage(L);
 }
 
+LUA_API void lua_gc( lua_State *L ) {
+  luaC_collectgarbage(L);
+}
